@@ -1,0 +1,27 @@
+body{
+    font-family: Arial;
+    color: whitesmoke;
+    background-color: black;
+
+}
+button{
+    cursor: pointer; 
+    padding: 10px;
+    border-radius: 75px;
+    border: none;
+
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.weight, .height{
+    padding: 10px;
+    border-radius: 75px;
+    border: none;
+}
+button:visited, button:hover{
+    color: white;
+    background-color: black;
+}

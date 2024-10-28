@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://172.20.10.2:5500/BMI.html -->
+<html lang="en-US" class=""><link type="text/css" id="dark-mode" rel="stylesheet" href="http://172.20.10.2:5500/BMI.html"><style type="text/css" id="dark-mode-сustom-style"></style><style type="text/css" id="dark-mode-theme-changer-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="BMI.css">
+</head>
+<body>
+    <h1 class="heading">BMI Calculator</h1>
+    <div class="div">
+        <input type="text" placeholder="Weight in KG" class="weight" >
+        <input type="text" placeholder="Height in meter" class="height" >
+        <button fdprocessedid="7lld98">Calculate</button>
+    </div>    
+    <p id="result">Please enter valid numbers.</p>
+    <script>
+        
+        document.querySelector('button').addEventListener('click', function calculate() {
+            let weight = parseFloat(document.querySelector('.weight').value);
+            let height = parseFloat(document.querySelector('.height').value);    
+            let bmi = weight / (height * height);
+            if (bmi < 18.5){
+                document.getElementById('result').innerHTML = `UnderWeight, because Your BMI is: ${bmi.toFixed(2)}`;
+            }
+            else if (bmi>=18.5 || bmi<=24.5){
+                document.getElementById('result').innerHTML = `NormalWeight, because Your BMI is: ${bmi.toFixed(2)}`;
+            }
+            else if (bmi>=25 || bmi<=29.9){
+                document.getElementById('result').innerHTML = `OverWeight, because Your BMI is: ${bmi.toFixed(2)}`;
+            }
+            else if (bmi>30){
+                document.getElementById('result').innerHTML = `Obese, because Your BMI is: ${bmi.toFixed(2)}`;
+            }
+            else{
+                document.getElementById('result').textContent = "Please enter valid numbers.";
+                return;
+            }
+        });
+
+            
+            
+
+    </script>
+<!-- Code injected by live-server -->
